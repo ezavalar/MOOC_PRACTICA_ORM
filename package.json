@@ -12,14 +12,14 @@
   },
   "scripts": {
     "start": "node rest_server.js",
-    "create_db": "./node_modules/.bin/sequelize db:create",
-    "drop_db": "./node_modules/.bin/sequelize db:drop",
-    "migrate_db": "./node_modules/.bin/sequelize db:migrate",
-    "seed_db": "./node_modules/.bin/sequelize db:seed:all",
-    "create_test_db": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:create",
-    "drop_test_db": "node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:drop",
-    "migrate_test_db": "node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate",
-    "seed_test_db": "node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:seed:all"
+    "create_db": ".\\node_modules\\.bin\\sequelize db:create",
+    "drop_db": ".\\node_modules\\.bin\\sequelize db:drop",
+    "migrate_db": ".\\node_modules\\.bin\\sequelize db:migrate",
+    "seed_db": ".\\node_modules\\.bin\\sequelize db:seed:all",
+    "create_test_db": ".\\node_modules\\.bin\\cross-env NODE_ENV=test .\\node_modules\\.bin\\sequelize db:create",
+    "drop_test_db": "node_modules\\.bin\\cross-env NODE_ENV=test .\\node_modules\\.bin/sequelize db:drop",
+    "migrate_test_db": "node_modules\\.bin\\cross-env NODE_ENV=test .\\node_modules\\.bin\\sequelize db:migrate",
+    "seed_test_db": "node_modules\\.bin\\cross-env NODE_ENV=test .\\node_modules\\.bin\\sequelize db:seed:all"
   },
   "dependencies": {
     "autocorector": "^3.1.6",

@@ -28,10 +28,9 @@ describe("P5_ORM_BBDD", function () {
     before('Create and populate testing database', async function() {
 
         try {
-            //Modificado por Ericka Zavala para Windows
-            await exec(/*'npm run create_test_db'*/'.\\node_modules\\.bin\\cross-env NODE_ENV=test .\\node_modules\\.bin\\sequelize db:create')
-            await exec(/*'npm run migrate_test_db'*/'.\\node_modules\\.bin\\cross-env NODE_ENV=test .\\node_modules\\.bin\\sequelize db:migrate')
-            await exec(/*'npm run seed_test_db'*/'.\\node_modules\\.bin\\cross-env NODE_ENV=test .\\node_modules\\.bin\\sequelize db:seed:all')
+            await exec('npm run create_test_db')
+            await exec('npm run migrate_test_db')
+            await exec('npm run seed_test_db')
 
             //let { stdout, stderr } = await exec(load_data)
             models = await models_lib.configure_db('orm_bbdd_test');
@@ -293,8 +292,7 @@ describe("P5_ORM_BBDD", function () {
 
     after('Delete testing database', async function() {
         try {
-            //Modificado por Ericka Zavala para Windows
-            await exec(/*'npm run drop_test_db'*/'.\\node_modules\\.bin\\cross-env NODE_ENV=test .\\node_modules\\.bin\\sequelize db:drop')
+            await exec('npm run drop_test_db')
             console.log('Base de datos de testing borrada satisfactoriamente.');
         } catch (error) {
             console.error('Unable to delete the database.');
